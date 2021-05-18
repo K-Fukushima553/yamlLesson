@@ -1,0 +1,138 @@
+# - fukushima@gmail.com
+# - kazuki@gmail.com
+# - fukushima+kazuki@gmail.com
+
+# シーケンス(配列)
+
+# ブロックスタイル
+# - a
+# - b
+# - c
+
+# フロースタイル
+# [a, b, 10] 
+
+# 入れ子
+# - a
+# -
+#   - b1
+#   - b2
+# - c
+
+# マッピング(ハッシュ)
+# name: kazuki
+# score: 90
+
+
+# name : kazuki #コロンの前は何個でも空白ok
+# score: 90
+
+#インラインスタイル
+# {name: kazuki, score: 90}
+
+#入れ子
+# name: kazuki
+# score:
+#   game1: 60
+#   game2: 90
+
+#改行
+# this
+# is
+# a
+# pen
+
+# - |
+#   this
+#   is
+#   a
+#   pen
+
+
+# - |+
+#   this
+#   is
+#   a
+#   pen
+
+
+# - |-
+#   this
+#   is
+#   a
+#   pen
+
+# - >
+#   this
+#   is
+#   a
+#   pen
+
+
+# - >+
+#   this
+#   is
+#   a
+#   pen
+
+
+# - >-
+#   this
+#   is
+#   a
+#   pen
+
+#アンカー、エイリアス
+# - &leader tanaka
+# - *leader
+# - &staff sato
+# - *staff 
+# - *staff 
+# - *staff 
+# - *staff 
+
+# - &taguchi
+#   name: taguchi
+#   score: 90
+# - &fuku
+#   name: fuku
+#   score: 40
+#   friend: 
+#     - *taguchi
+# - name: shima
+#   score: 60
+#   friend: 
+#     - *taguchi
+#     - *fuku 
+
+# <<
+
+# common: &common
+#   user: dbuser
+#   password: dbpassword
+  
+
+# development: 
+#   database: myapp_dev
+#   <<: *common
+
+# production: 
+#   database: myapp_prod
+#   <<: *common
+
+# test: 
+#   database: myapp_test
+#   <<: *common
+
+
+---
+  - a
+  - b
+  - c
+...
+---
+  - 1
+  - 2
+  - 3
+...
+
